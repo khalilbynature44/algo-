@@ -1,0 +1,25 @@
+ALGORITHM somme_arrays
+VAR
+    tab1,tab2: ARRAY[100];
+    I,J: int;
+BEGIN
+write("donner taille du tab1");
+write("donner taille du tab2");
+read(n1);
+read(n2);
+sum :=0;
+FOR i FROM 1 TO n1 STEP 1  DO
+    read(tab1[i]);
+END_FOR
+FOR j FROM 1 TO n1 STEP 1  DO
+    read(tab1[j]);
+END_FOR
+FOR i FROM 1 TO n1 STEP 1  DO
+    FOR j FROM 1 TO n2 STEP 1  DO
+        IF (tab1[i]=tab2[j]) THEN
+            sum:=sum+tab1[i]+tab2[j];
+        END_IF
+    END_FOR
+END_FOR
+write("the sum of overlapping elements in two sets is ",sum);
+END
